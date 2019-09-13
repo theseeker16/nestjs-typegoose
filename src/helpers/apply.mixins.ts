@@ -1,4 +1,4 @@
-class ApplyMixin { 
+export class ApplyMixin { 
     applyMixins = (derivedCtor: any, baseCtors: any[]) => {
         baseCtors.forEach(baseCtor => {
             Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
@@ -7,6 +7,3 @@ class ApplyMixin {
         });
     }
 }
-
-export default new ApplyMixin();
-
